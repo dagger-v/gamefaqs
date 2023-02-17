@@ -1,0 +1,41 @@
+.board__information {
+  display: block;
+  flex-direction: column;
+  float: right;
+  width: 40%;
+  padding-top: 2.8vw;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue-text {
+  color: #3449b2;
+}
+
+.blue-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.board-info-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.board__information-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.board__information-content span {
+  margin-top: 10px;
+  width: 60%;
+}
+
+.board__information-account {
+  color: #808080;
+  font-size: smaller;
+  font-weight: bold;
+}

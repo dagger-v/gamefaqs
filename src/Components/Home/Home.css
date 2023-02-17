@@ -3,21 +3,28 @@
 }
 
 .main__content-games {
-  padding-left: 300px;
+  padding: 5px 10vw;
+}
+
+.main__content-games-title {
+  text-align: center;
+}
+
+.main__content-games-ask-qa {
+  display: flex;
+  margin-top: 10px;
 }
 
 .main__content-qa-btn {
   color: #fff;
   border: 1px solid #3951c6;
   border-bottom: 1px solid #2e419e;
+  border-radius: 5px;
   background-color: #6174d1;
   cursor: pointer;
   text-align: center;
-  border-radius: 4px;
-  padding: 9px 14px;
-  font-size: 18px;
-  line-height: normal;
-  width: 100%;
+  font-size: 15px;
+  width: 80%;
 }
 
 p,
@@ -27,4 +34,9 @@ label {
 
 input {
   margin: 0.4rem;
+}
+
+.title {
+  font-size: larger;
+  font-weight: bold;
 }

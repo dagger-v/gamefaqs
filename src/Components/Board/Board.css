@@ -1,0 +1,79 @@
+.board__main-content {
+  padding: 5px 10vw;
+}
+
+.board-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.fave-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.blue {
+  border-bottom: 2px solid #3951c6;
+}
+
+.board__main-board {
+  background-color: #28398a;
+  border: 1px solid #28398a;
+  width: 60%;
+  margin-top: 5px;
+}
+
+.board__main-board span {
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.board__main-fave {
+  background-color: #28398a;
+  border: 1px solid #28398a;
+  width: 60%;
+  margin-top: 1px;
+}
+
+.board__main-fave span {
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.gfaqs-announcements {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  width: 60%;
+}
+
+.bottom {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.gfaqs-announcements span {
+  display: flex;
+  margin-left: 10px;
+}
+
+.gfaqs-announcements:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.favorite__board {
+  color: #28398a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.favorite__description {
+  font-size: smaller;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+.board__topic-info {
+  float: right;
+}

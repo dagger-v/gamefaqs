@@ -1,6 +1,9 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 
-import LOGO from "../Images/logo.png";
+import LOGO from "../../Images/logo.png";
 
 const Header = () => {
   return (
@@ -21,30 +24,27 @@ const Header = () => {
       </div>
       <div className="header__container">
         <div className="header__container-logo">
-          <img src={LOGO} alt="logo"></img>
+          <Link to="/">
+            <img src={LOGO} alt="logo"></img>
+          </Link>
         </div>
         <div className="header__container-search">
-          <input type="text" placeholder="Search Game Titles" name="search" />
+          <input
+            className="search"
+            type="text"
+            placeholder="Search Game Titles"
+            name="search"
+          />
         </div>
         <nav className="header__container-nav">
-          <a href="/" className="header__nav-item">
+          <a href="/board" className="header__nav-item">
             Boards
           </a>
-          <a href="/" className="header__nav-item">
-            News
-          </a>
-          <a href="/" className="header__nav-item">
-            Q&A
-          </a>
-          <a href="/" className="header__nav-item">
-            Community
-          </a>
-          <a href="/" className="header__nav-item">
-            Contribute
-          </a>
-          <a href="/" className="header__nav-item">
-            Games
-          </a>
+          <span className="header__nav-item">News</span>
+          <span className="header__nav-item">Q&A</span>
+          <span className="header__nav-item">Community</span>
+          <span className="header__nav-item">Contribute</span>
+          <span className="header__nav-item">Games</span>
         </nav>
       </div>
       <div className="header__footer"></div>
