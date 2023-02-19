@@ -11,7 +11,9 @@ const Game = () => {
         <span>Favorite Boards</span>
       </div>
       <div className="gfaqs-announcements">
-        <span className="favorite__board">GameFAQs Annoucements</span>
+        <a href="/board/gamefaqs-announcements" className="favorite__board">
+          GameFAQs Announcements
+        </a>
         <span className="favorite__description">
           Site Search Rollup/Updates
         </span>
@@ -20,28 +22,39 @@ const Game = () => {
         <span>Game Boards</span>
       </div>
       <div className="gfaqs-announcements">
-        <span className="favorite__board">Animal Crossing: New Horizons</span>
+        <a
+          href="/board/animal-crossing-new-horizons"
+          className="favorite__board"
+        >
+          Animal Crossing: New Horizons
+        </a>
         <span className="favorite__description">
           One thing they should add in the next game.
         </span>
       </div>
 
       <div className="gfaqs-announcements">
-        <span className="favorite__board">Final Fantasy IX</span>
+        <a href="/board/final-fantasy-ix" className="favorite__board">
+          Final Fantasy IX
+        </a>
         <span className="favorite__description">
           Final Fantasy IX riddles part 55 (spoilers)
         </span>
       </div>
 
       <div className="gfaqs-announcements">
-        <span className="favorite__board">Pokemon Scarlet</span>
+        <a href="/board/pokemon-scarlet" className="favorite__board">
+          Pokemon Scarlet
+        </a>
         <span className="favorite__description">
           So do you think Mega is coming back?
         </span>
       </div>
 
       <div className="gfaqs-announcements">
-        <span className="favorite__board">World of Warcraft</span>
+        <a href="/board/world-of-warcraft" className="favorite__board">
+          World of Warcraft
+        </a>
         <span className="favorite__description">Sub count back up?</span>
       </div>
     </>

@@ -8,7 +8,7 @@ const Social = () => {
       </div>
 
       <div className="gfaqs-announcements">
-        <a href="/currentevents" className="favorite__board">
+        <a href="board/current-events" className="favorite__board">
           Current Events
         </a>
         <span className="favorite__description">

@@ -8,7 +8,9 @@ const Community = () => {
       </div>
 
       <div className="gfaqs-announcements bottom">
-        <span className="favorite__board">The Fam</span>
+        <a href="/board/the-fam" className="favorite__board">
+          The Fam
+        </a>
         <span className="favorite__description">Card collections topic</span>
       </div>
     </>

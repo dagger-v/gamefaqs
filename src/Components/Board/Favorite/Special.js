@@ -8,12 +8,16 @@ const Special = () => {
       </div>
 
       <div className="gfaqs-announcements">
-        <span className="favorite__board">Movies: At the Theater</span>
+        <a href="/board/movies-at-the-theater" className="favorite__board">
+          Movies: At the Theater
+        </a>
         <span className="favorite__description">Rank the MCU movies</span>
       </div>
 
       <div className="gfaqs-announcements">
-        <span className="favorite__board">Television: Broadcast TV</span>
+        <a href="/board/television-broadcast-tv" className="favorite__board">
+          Television: Broadcast TV
+        </a>
         <span className="favorite__description">
           Flash Season 9 Spoiler Discussion
         </span>
