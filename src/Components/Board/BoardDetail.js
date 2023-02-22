@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { format, parse } from "date-fns";
 
 import Header from "../Header/Header";
+import MessageDetail from "./MessageDetail";
 import TitleDetails from "./TitleDetails";
 
 const BoardDetail = () => {
   const { id } = useParams();
 
-  const [topic, setTopic] = useState([]);
+  const [topic, setTopic] = useState(() => {
+    const topicJson = localStorage.getItem("topic");
+    return topicJson ? JSON.parse(topicJson) : [];
+  });
 
   const [title, setTitle] = useState();
   const [message, setMessage] = useState();
@@ -20,23 +23,39 @@ const BoardDetail = () => {
 
   const addTopic = (e) => {
     e.preventDefault();
-    setTopic([
+
+    const updatedTopic = [
       ...topic,
       {
-        id: 4,
+        board: id,
         title: title,
         message,
+        messagePath: Math.floor(Math.random() * 1000000000),
         author: "SomeLikeItHoth",
         count: 1,
-        date: new Date(),
+        date: new Date().toLocaleTimeString("en-US"),
       },
-    ]);
+    ];
+
+    setTopic(updatedTopic);
+
     setTitle("");
     setMessage("");
     setShow(false);
   };
 
   const board = TitleDetails.find((detail) => detail.id === id).title;
+
+  useEffect(() => {
+    localStorage.setItem("topic", JSON.stringify(topic));
+  }, [topic]);
+
+  useEffect(() => {
+    const topics = JSON.parse(localStorage.getItem("topic"));
+    if (topics) {
+      setTopic(topic);
+    }
+  }, []);
 
   return (
     <div>
@@ -70,17 +89,28 @@ const BoardDetail = () => {
             </thead>
             <tbody>
               {topic
-                .sort((a, b) => b.date - a.date)
-                .map(({ title, author, count, date }, index) => (
-                  <tr>
-                    <td className="forum__topic">
-                      <a href="/anime">{title}</a>
-                    </td>
-                    <td>{author}</td>
-                    <td className="forum__msg">{count}</td>
-                    <td>{format(date, "M/dd h:mma")}</td>
-                  </tr>
-                ))}
+                .filter((x) => x.board === id)
+                .sort((a, b) => {
+                  if (a > b) {
+                    return 1;
+                  }
+                  return -1;
+                })
+                .map(
+                  (
+                    { board, title, messagePath, author, count, date },
+                    index
+                  ) => (
+                    <tr>
+                      <td className="forum__topic">
+                        <a href={id + "/" + messagePath}>{title}</a>
+                      </td>
+                      <td>{author}</td>
+                      <td className="forum__msg">{count}</td>
+                      <td>{date}</td>
+                    </tr>
+                  )
+                )}
             </tbody>
           </table>
         </div>

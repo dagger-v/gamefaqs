@@ -170,6 +170,10 @@ tr:nth-child(odd) {
   margin-top: 10px;
 }
 
+.forum__topic-new-post textarea {
+  width: 50%;
+}
+
 .forum__topic-new-post input {
   margin-left: 0;
 }

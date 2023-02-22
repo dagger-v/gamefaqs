@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import Username from "./Username";
 
 import "./Header.css";
 
@@ -17,9 +19,7 @@ const Header = () => {
           <span>Xbox One</span>
           <span>Xbox Series</span>
           <span>More Systems ▼</span>
-          <span className="username">
-            ✉ <i class="far fa-bell"></i> SomeLikeItHoth ▼
-          </span>
+          <Username />
         </div>
       </div>
       <div className="header__container">
@@ -36,6 +36,7 @@ const Header = () => {
             name="search"
           />
         </div>
+        <div></div>
         <nav className="header__container-nav">
           <a href="/board" className="header__nav-item">
             Boards
